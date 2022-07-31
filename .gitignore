@@ -1,0 +1,15 @@
+__pycache__
+
+*.txt
+!requirements.txt
+
+script/ps1/
+script/*.bat
+.env
+*.code-workspace
+
+materials/
+log/
+db/
+venv/
+src/test.py
