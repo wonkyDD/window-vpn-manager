@@ -88,7 +88,7 @@ def create_tables(cur: sqlite3.Cursor, tables: List[str]):
 
 # TODO : https://www.geeksforgeeks.org/how-to-create-a-backup-of-a-sqlite-database-using-python/
 # SQL문으로 백업해놓는게 옳을까?
-def backup_database(self):
+def backup_database():
     db_address = get_database()
     try:
         db = sqlite3.connect(db_address)
