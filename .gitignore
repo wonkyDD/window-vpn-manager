@@ -4,7 +4,7 @@ __pycache__
 !requirements.txt
 
 script/ps1/
-script/*.bat
+# script/*.bat
 .env
 *.code-workspace
 
