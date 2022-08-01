@@ -9,7 +9,6 @@ from settings import (
 )
 from YdManager import YdManager
 from database import get_database, backup_database
-from src.util import count_uploaded_videos
 
 
 def make_directory():
@@ -75,10 +74,6 @@ if __name__ == '__main__':
     backup_database()
     
     yd_manager = YdManager(DRIVER_TYPES.get('firefox'))
-    
-    # 반드시 insert전에 호출
-    count_uploaded_videos(yd_manager)
-    
     insert()
     fetch()
     
