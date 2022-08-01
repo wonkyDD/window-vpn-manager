@@ -34,9 +34,9 @@ from logging.handlers import RotatingFileHandler
 from typing import Dict, List, Tuple, final
 from urllib.parse import urlparse
 from time import time, sleep
-from settings import TXT_NAME, TXT_PATH
-from xpath_compile import read_xpath
-from settings import (
+from .settings import TXT_NAME, TXT_PATH
+from .xpath_compile import read_xpath
+from .settings import (
     DRIVER_TYPES,
     TARGET_LINKS,
     SCREENSHOT_NAMES,
@@ -46,9 +46,9 @@ from settings import (
     LOG_PATH,
 )
 
-from database import get_database
-from xpath import xpath
-from util import(
+from .database import get_database
+from .xpath import xpath
+from .util import(
     timer,
     dash_to_underscore,
 )
@@ -81,7 +81,7 @@ class YdManager(object):
             self.start_time = time()
         
         # TODO : 이거 에러남
-        self.logger = self.init_logger(self.show_logs)
+        # self.logger = self.init_logger(self.show_logs)
             
     
     def __enter__(self):
@@ -350,12 +350,14 @@ class YdManager(object):
         # TODO :
         # if custom_log_handler:
         #     logger.addHandler(custom_log_handler)
-
-        if show_logs is True:
-            console_handler = logging.StreamHandler()
-            console_handler.setLevel(logging.DEBUG)
-            console_handler.setFormatter(console_handler_formatter)
-            logger.addHandler(console_handler)
+        
+        
+        # TODO :
+        # if show_logs is True:
+        #     console_handler = logging.StreamHandler()
+        #     console_handler.setLevel(logging.DEBUG)
+        #     console_handler.setFormatter(console_handler_formatter)
+        #     logger.addHandler(console_handler)
 
         return logger
     

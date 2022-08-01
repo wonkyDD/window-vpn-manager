@@ -12,8 +12,8 @@ import re
 
 from multipledispatch import dispatch
 from typing import List, Dict, Tuple
-from database import get_database
-from settings import(
+from .database import get_database
+from .settings import(
     TARGET_LINKS,
     DB_TABLE_NAMES,
 )

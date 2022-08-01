@@ -34,7 +34,7 @@ row 한도는 정해져있지않고, column은 id, day, elapsedtime 3개로 끝�
 import sqlite3
 import os
 from typing import List
-from settings import (
+from .settings import (
     DB_NAME, 
     DB_PATH, 
     DB_TABLE_NAMES,
