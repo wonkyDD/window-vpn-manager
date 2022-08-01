@@ -9,10 +9,8 @@ from YdManager import YdManager
 
 import sqlite3
 import re
-from tkinter.tix import Tree
 
 from multipledispatch import dispatch
-from selenium import webdriver
 from typing import List, Dict, Tuple
 from database import get_database
 from settings import(
