@@ -1,0 +1,18 @@
+[MASTER]
+disable=
+    C0103, # invalid-name
+    C0114, # missing-module-docstring
+    C0115, # missing-class-docstring
+    C0116, # missing-function-docstring
+    C0200, # consider-using-enumerate
+    C0201, # consider-iterating-dictionary
+    C0301, # line-too-long
+    C0303, # Trailing whitespace
+    E0102, # function-redefined
+    W0511, # fixme
+    W0703, # broad-except
+    W1401, # anomalous-backslash-in-string
+    R0914, # too-many-locals,
+    R0912, # too-many-branches
+    R0913, # too-many-arguments
+    R1702, # too-many-nested-blocks
