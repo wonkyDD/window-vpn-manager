@@ -1,5 +1,5 @@
 xpath = {}
 
-xpath['video'] = {
-    'video_grid' : "//div[@class='column']",
+xpath["video"] = {
+    "video_grid": "//div[@class='column']",
 }
