@@ -1,15 +1,22 @@
+# cache
 __pycache__
+.pytest_cache
+.mypy_cache
 
-*.txt
-!requirements.txt
+# root
 test.py
-
-script/ps1/
-# script/*.bat
 .env
 *.code-workspace
 
-materials/
-log/
+# database
 db/
+
+# coverage
+.coverage  
+htmlcov/
+
+# dev
+log/
+materials/
 venv/
+script/ps1/
