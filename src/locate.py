@@ -16,54 +16,54 @@ row 한도는 정해져있지않고, column은 id(primary), id(공유), genre, n
 # - 파일 대용량 이동
 # - 파일 이동완료 / 미완료 이벤트는 어떻게 다루는지?
 #
-# 
-# 1. 0번 분석 기반으로, locate.py 수정 
+#
+# 1. 0번 분석 기반으로, locate.py 수정
 # 2. 0번을 기반으로 확신이 든다면, #life.ps1을 알맞게 수정
 
 
-# TODO : 
+# TODO :
 # 2. 파일이동전에는 용량을 읽어온다
 # 3. sqlite로 용량은 따로 로컬db에 저장
 
 
-from datetime import datetime
 import os
 import shutil
+from datetime import datetime
 
-WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'] 
-SRC = 'C:\\Users\\USER\\Downloads\\'
-KOR_DEST = 'Z:\\Korea\\kissjav\\'
-CHN_DEST = 'Z:\\.CHINA\\'
-MOV_DEST = 'Z:\\.MOVIE\\'
+WEEKDAYS = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"]
+SRC = "C:\\Users\\USER\\Downloads\\"
+KOR_DEST = "Z:\\Korea\\kissjav\\"
+CHN_DEST = "Z:\\.CHINA\\"
+MOV_DEST = "Z:\\.MOVIE\\"
 
 
 def locate(genre: str):
     get_files = os.listdir(SRC)
-    
-    if(genre == 'kor'):
+
+    if genre == "kor":
         date = datetime.now()
-        pref = '.'
-        sep = '_'
+        pref = "."
+        sep = "_"
         y = str(date.year)
-        m = '0' + str(date.month) if date.month < 10 else str(date.month)
+        m = "0" + str(date.month) if date.month < 10 else str(date.month)
         d = str(date.day)
         wd = WEEKDAYS[datetime.today().weekday()]
 
         DIRNAME = pref + y + sep + m + sep + d + sep + wd
 
-        if(not os.path.exists(KOR_DEST + DIRNAME)):
+        if not os.path.exists(KOR_DEST + DIRNAME):
             os.mkdir(KOR_DEST + DIRNAME)
-        
+
         # TODO : 중복이름에 대해 어떻게 처리하는지?
         for f in get_files:
-            shutil.move(SRC + f, KOR_DEST)        
-        
-    if(genre == 'chn'):
+            shutil.move(SRC + f, KOR_DEST)
+
+    if genre == "chn":
         # TODO : 중복이름에 대해 어떻게 처리하는지?
         for f in get_files:
             shutil.move(SRC + f, CHN_DEST)
-        
-    if(genre == 'mov'):
+
+    if genre == "mov":
         # TODO : 중복이름에 대해 어떻게 처리하는지?
         for f in get_files:
             shutil.move(SRC + f, MOV_DEST)
