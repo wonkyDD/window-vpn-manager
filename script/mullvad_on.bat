@@ -29,7 +29,7 @@ echo %output%
 
 
 @REM start chrome 무조건 앞에 위치해야함
-python ..\src\start.py
+python ..\start.py
 
 
 start chrome https://kissjav.li/videos/china-porn/ 

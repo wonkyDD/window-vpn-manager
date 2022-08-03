@@ -39,7 +39,7 @@ taskkill /F /IM chrome.exe /T
 @REM Set-Alias chrome "C:\Program Files\Google\Chrome\Application\chrome.exe"
 @REM chrome --headless --print-to-pdf=d:\naver.pdf http://naver.com
 
-python ..\src\end.py
+python ..\end.py
 
 echo.
 echo.
