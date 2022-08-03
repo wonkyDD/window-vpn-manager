@@ -47,7 +47,7 @@ from .xpath_compile import read_xpath
 
 
 class YdManager:
-    def __new__(cls):
+    def __new__(cls, *args, **kwargs):  # pylint: disable=W0613
         if not hasattr(cls, "_instance"):
             cls._instance = super().__new__(cls)
         return cls._instance
